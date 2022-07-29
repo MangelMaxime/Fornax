@@ -45,8 +45,7 @@ module EvaluatorHelpers =
 
     let internal getOpen (path : string) =
         let filename = Path.GetFileNameWithoutExtension path
-        let textInfo = (CultureInfo("en-US", false)).TextInfo
-        textInfo.ToTitleCase filename
+        (string filename[0]).ToUpper() + filename.[1..]
 
     let internal getLoad (path : string) =
         path.Replace("\\", "\\\\")
