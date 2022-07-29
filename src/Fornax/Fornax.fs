@@ -251,7 +251,8 @@ let main argv =
                         fragment = "_public" ||     
                         fragment = ".sass-cache" ||    
                         fragment = ".git" ||           
-                        fragment = ".ionide")
+                        fragment = ".ionide" ||
+                        fragment = "node_modules")
                     |> not
 
                 if shouldHandle then
